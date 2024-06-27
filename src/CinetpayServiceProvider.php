@@ -6,7 +6,6 @@ use Illuminate\Support\ServiceProvider;
 
 class CinetpayServiceProvider extends ServiceProvider
 {
-    
     public function register()
     {
         $this->mergeConfigFrom(__DIR__.'/../config/cinetpay.php', 'cinetpay');
