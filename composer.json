@@ -1,17 +1,17 @@
 {
-    "name": ":vendor_slug/:package_slug",
-    "description": ":package_description",
+    "name": "rikudosama/cinetpay",
+    "description": "A Laravel package for integrating CinetPay",
     "keywords": [
-        ":vendor_name",
+        "rikudosama",
         "laravel",
-        ":package_slug"
+        "cinetpay"
     ],
-    "homepage": "https://github.com/:vendor_slug/:package_slug",
+    "homepage": "https://github.com/rikudosama/Cinetpay",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": "author@domain.com",
+            "name": "Rikudo sama",
+            "email": "bjean633@gmail.com",
             "role": "Developer"
         }
     ],
@@ -35,33 +35,33 @@
     },
     "autoload": {
         "psr-4": {
-            "VendorName\\Skeleton\\": "src/",
-            "VendorName\\Skeleton\\Database\\Factories\\": "database/factories/"
+            "Rikudosama\\Cinetpay\\": "src/",
+            "Rikudosama\\Cinetpay\\Database\\Factories\\": "database/factories/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "VendorName\\Skeleton\\Tests\\": "tests/",
+            "Rikudosama\\Cinetpay\\Tests\\": "tests/",
             "Workbench\\App\\": "workbench/app/"
         }
     },
     "scripts": {
         "post-autoload-dump": "@composer run prepare",
-        "clear": "@php vendor/bin/testbench package:purge-skeleton --ansi",
-        "prepare": "@php vendor/bin/testbench package:discover --ansi",
+        "clear": "@php Rikudosama/bin/testbench package:purge-skeleton --ansi",
+        "prepare": "@php Rikudosama/bin/testbench package:discover --ansi",
         "build": [
             "@composer run prepare",
-            "@php vendor/bin/testbench workbench:build --ansi"
+            "@php Rikudosama/bin/testbench workbench:build --ansi"
         ],
         "start": [
             "Composer\\Config::disableProcessTimeout",
             "@composer run build",
-            "@php vendor/bin/testbench serve"
+            "@php Rikudosama/bin/testbench serve"
         ],
-        "analyse": "vendor/bin/phpstan analyse",
-        "test": "vendor/bin/pest",
-        "test-coverage": "vendor/bin/pest --coverage",
-        "format": "vendor/bin/pint"
+        "analyse": "Rikudosama/bin/phpstan analyse",
+        "test": "Rikudosama/bin/pest",
+        "test-coverage": "Rikudosama/bin/pest --coverage",
+        "format": "Rikudosama/bin/pint"
     },
     "config": {
         "sort-packages": true,
@@ -73,11 +73,9 @@
     "extra": {
         "laravel": {
             "providers": [
-                "VendorName\\Skeleton\\SkeletonServiceProvider"
+                "Rikudosama\\Cinetpay\\CinetpayServiceProvider"
             ],
-            "aliases": {
-                "Skeleton": "VendorName\\Skeleton\\Facades\\Skeleton"
-            }
+            "aliases": {}
         }
     },
     "minimum-stability": "dev",
