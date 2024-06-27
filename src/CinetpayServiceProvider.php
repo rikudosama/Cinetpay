@@ -25,4 +25,4 @@ class CinetpayServiceProvider extends ServiceProvider
             __DIR__.'/../config/cinetpay.php' => config_path('cinetpay.php'),
         ], 'config');
     }
-  }
+}
