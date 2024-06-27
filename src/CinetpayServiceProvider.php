@@ -34,4 +34,4 @@ class CinetpayServiceProvider extends ServiceProvider
             ], 'cinetpay-views');
         }
     }
-  }
+}

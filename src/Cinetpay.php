@@ -7,8 +7,11 @@ use GuzzleHttp\Client;
 class Cinetpay
 {
     protected $apiKey;
+
     protected $siteId;
+
     protected $baseUrl;
+
     protected $client;
 
     public function __construct($apiKey, $siteId, $baseUrl)
