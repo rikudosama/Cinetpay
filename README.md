@@ -70,6 +70,11 @@ class PaymentController extends Controller
     }
 }
 ```
+## Usage views
+```php
+return view('cinetpay::cinetpay');
+
+```
 
 ## Testing
 

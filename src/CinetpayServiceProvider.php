@@ -6,6 +6,7 @@ use Illuminate\Support\ServiceProvider;
 
 class CinetpayServiceProvider extends ServiceProvider
 {
+    
     public function register()
     {
         $this->mergeConfigFrom(__DIR__.'/../config/cinetpay.php', 'cinetpay');
@@ -24,5 +25,13 @@ class CinetpayServiceProvider extends ServiceProvider
         $this->publishes([
             __DIR__.'/../config/cinetpay.php' => config_path('cinetpay.php'),
         ], 'config');
+
+        $this->loadViewsFrom(__DIR__.'/../resources/views', 'cinetpay');
+
+        if ($this->app->runningInConsole()) {
+            $this->publishes([
+                __DIR__.'/../resources/views' => resource_path('views/vendor/cinetpay'),
+            ], 'cinetpay-views');
+        }
     }
   }
